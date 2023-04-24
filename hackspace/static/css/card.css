@@ -1,0 +1,396 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+.header-container {
+    padding: 12px 50px;
+    margin-left: 100px;
+}
+.banner {
+    position: relative;
+    background: #003145; 
+    color: #fff;
+    /* width: 1px; */
+    height: 416px;
+    padding: 0;
+    margin: 0 0;
+}
+
+
+.banner-head{
+    position: absolute;
+    margin: 88px 0px 0px 150px;
+    
+    /* identical to box height */
+    /* Celestial Hue/Celestial Light */
+}
+
+.card-logo{
+    float: left;
+    width: 120px;
+    height: 120px;
+    border-radius: 10px;   
+    margin: 0px 40px 24px 0px ; 
+}
+
+.card-title{
+    float: left;
+    width: 836px;
+    height: 63px;
+    
+    /* Desktop/Heading 1/H1 600 */
+    
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 42px;
+    line-height: 63px;
+    /* identical to box height */
+    
+    
+    /* Celestial Hue/Celestial Light */
+    
+    color: #FFFFFF;
+
+}
+
+.card-operation{
+    float: left;
+}
+
+.card-edit{
+    padding: 6px;
+    width: 120px;
+    text-align: center;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 175%;
+    /* identical to box height, or 28px */
+    
+    
+    /* Celestial Hue/Celestial Light */
+    
+    color: #FFFFFF;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5px;
+    border-color: #fff;
+    padding: 2px 8px;
+    margin-bottom: 24px;
+}
+
+.card-delete{
+    padding: 6px;
+    width: 120px;
+    text-align: center;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 175%;
+    /* identical to box height, or 28px */
+    
+    
+    /* Celestial Hue/Celestial Light */
+    
+    color: #FFFFFF;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5px;
+    border-color: #fff;
+    padding: 2px 8px;
+}
+
+.card-summary{
+    position: absolute;
+    margin: 240px 0px 0px 142px;
+    padding: 12px;
+    width: auto;
+    height: 26px;
+    
+    /* Desktop/Heading 6/H6 500 */
+    
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 26px;
+    /* identical to box height */
+    
+    
+    /* Celestial Hue/Celestial Light */
+    
+    color: #FFFFFF;
+}
+/* 
+* {box-sizing: border-box} */
+
+/* Set a style for all buttons */
+.cancelbtn, .deletebtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+button:hover {
+  opacity:1;
+}
+
+/* Float cancel and delete buttons and add an equal width */
+.cancelbtn, .deletebtn {
+    border-radius: 15px;
+  margin-left: 24px;
+  float: right;
+  width: 20%;
+}
+
+/* Add a color to the cancel button */
+.cancelbtn {
+  background-color: #ccc;
+  color: black;
+}
+
+/* Add a color to the delete button */
+.deletebtn {
+  background-color: #f44336;
+}
+
+
+/* Add padding and center-align text to the container */
+.container {
+  
+  padding: 16px;
+  text-align: center;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 450px;
+  height: 260px;
+  overflow: auto; /* Enable scroll if needed */
+  background-color: #474e5d;
+  padding-top: 50px;
+  background: #FFFFFF;
+  border-radius: 24px;
+  margin: 250px 600px;
+}
+
+
+/* Modal Content/Box */
+
+
+.modaltext{
+    text-align: left;
+}
+.question{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+
+/* Celestial Grey/CG 500 */
+color: #666666;
+}
+
+.modal-head{
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 30px;
+line-height: 30px;
+/* identical to box height */
+
+
+/* Celestial Grey/CG 900 */
+
+color: #222222;
+
+}
+/* Style the horizontal ruler */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* The Modal Close Button (x) */
+.close {
+  position: absolute;
+  right: 35px;
+  top: 15px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #f1f1f1;
+}
+
+.close:hover,
+.close:focus {
+  color: #f44336;
+  cursor: pointer;
+}
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.star-icon-wrapper {
+    display: flex;
+    align-items: center;
+  }
+  
+  .star-icon {
+    display: inline-block;
+  }
+  
+  .star-icon input[type="checkbox"] {
+    display: none;
+  }
+  
+  .star-icon label {
+    font-size: 40px;
+    cursor: pointer;
+    color: #ccc;
+  }
+  
+  .star-icon input[type="checkbox"]:checked + label {
+    color: gold;
+  }
+  
+  .divider {
+    width: auto;
+    height: 35px;
+    border-left-style: solid;
+    padding-left: 24px;
+    /* background-color: #F5F5F5; */
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  
+  .summary-text{
+    margin-bottom: 24px;
+  }
+
+  .card-description{
+    margin: 0px 0px 0px 24px;
+    padding-left: 142px;
+    padding-top: 50px;
+    width: 100%;
+    overflow: auto;
+  }
+
+  .desc-left{
+    width: 60%;
+    height: auto;
+    float: left;
+    padding-right: 40px;
+  }
+  .desc-right{
+    width: 40%;
+    height: auto;
+    float: right;
+  }
+
+  .description-head{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 30px;
+    /* identical to box height */
+    
+    
+    /* Celestial Grey/CG 900 */
+    
+    color: #222222;
+  }
+
+  .description{
+    padding-top: 24px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    
+    /* Celestial Grey/CG 700 */
+    
+    color: #333333;
+  }
+
+  .hack{
+    padding: 12px 0;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 26px;
+    /* identical to box height */
+    /* Celestial Grey/CG 400 */
+    color: #858585;
+  }
+
+  .hackname{
+    padding: 12px 0;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    
+    /* Celestial Grey/CG 700 */
+    
+    color: #333333;
+  }
+
+  .hacktime{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height */
+    /* Celestial Grey/CG 400 */
+    color: #858585;
+    }
+
+    .hacklink{
+        text-align: center;
+        margin: 24px 0 0 0;
+        width: 170px;
+        padding: 6px;
+        border-style: solid;
+        border-radius: 10px;
+        border-width: 1px;
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 175%;
+        /* identical to box height, or 28px */
+        /* Celestial Grey/CG 500 */
+        color: #666666;
+    }
+    a:link,a:visited  {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 175%;
+        /* identical to box height, or 28px */
+        /* Celestial Grey/CG 500 */
+        color: #666666;
+    }

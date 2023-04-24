@@ -1,0 +1,90 @@
+body {
+    padding: 0;
+    margin: 0;
+    padding-left: 142px;
+}
+.header-container {
+    padding: 12px 00px;
+    margin-left: 0px;
+}
+
+.iform-container{
+    background: #FFFFFF;
+    border-radius: 24px;
+    margin-top: 50px;
+    max-width: 706px;
+}
+
+.iform-head{
+    width: 408px;
+    height: 44px;    
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 29px;
+    line-height: 44px;
+    color: #333333;
+}
+
+.input-field {
+    margin: 30px 0;
+}
+
+.input-field label {
+    display: block;
+}
+
+.input-field input{
+    display: block;
+    width: 100%;
+    border: 1px solid #CCCCCC;
+    border-radius: 8px;
+    height: 51px;
+    padding: 0 15px;
+}
+
+.input-field textarea {
+    display: block;
+    width: 100%;
+    border: 1px solid #CCCCCC;
+    border-radius: 8px;
+    height: 150px;
+    padding: 0 15px;
+}
+
+.input-field input[name="description"] {
+    height: 450px;
+}
+
+.field-column {
+    width: 49%;
+    display: inline-block;
+}
+
+.button:hover{
+    
+    color: #ccfba0f2;
+}
+
+.upload-button {
+    position: absolute;
+    width: 194px;
+    height: 52px;
+    padding: 12px 18px;
+    text-align: center;
+    /* Celestial Green/CG 600 */
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 175%;
+    /* identical to box height, or 28px */
+    
+    
+    /* Celestial Hue/Celestial Light */
+    
+    color: #FFFFFF;
+    background: #44924C;
+    box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px rgba(0, 0, 0, 0.14), 0px 1px 5px rgba(0, 0, 0, 0.12);
+    border-radius: 10px;
+}

@@ -1,0 +1,336 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+.header-container {
+    padding: 12px 50px;
+    margin-left: 100px;
+}
+.banner {
+    background: #003145; 
+    color: #fff;
+    /* width: 1px; */
+    height: 416px;
+    padding: 0;
+    margin: 0 0;
+}
+
+.banner-logo{
+   float: right;
+    /* width: 199.89px; */
+    height: 300px;
+    margin: 58px 142.11px 58px 0;
+    /* float: right; */
+}
+
+.banner-head{
+    display: inline;
+    position: absolute;
+    margin: 88px 0px 0px 150px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 42px;
+    line-height: 63px;
+    /* identical to box height */
+    /* Celestial Hue/Celestial Light */
+}
+
+.banner-desc{
+    display: inline;
+    position: absolute;
+    width: 792px;
+    margin: 164px 0px 0px 150px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 26px;
+    
+    /* Celestial Hue/Celestial Light */
+    
+    color: #FFFFFF;
+}
+
+.banner-button:hover{
+    
+    color: #ccfba0f2;
+}
+
+.banner-button {
+    position: absolute;
+    margin: 276px 0px 0px 150px;
+    width: 194px;
+    height: 52px;
+    padding: 12px 18px;
+    text-align: center;
+    /* Celestial Green/CG 600 */
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 175%;
+    /* identical to box height, or 28px */
+    
+    
+    /* Celestial Hue/Celestial Light */
+    
+    color: #FFFFFF;
+    background: #44924C;
+    box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px rgba(0, 0, 0, 0.14), 0px 1px 5px rgba(0, 0, 0, 0.12);
+    border-radius: 10px;
+}
+
+.navbar-container{
+    padding: 24px 166px;
+    margin-left: 0px;
+}
+
+.nav-item{
+    border-width: 2px;
+    display: inline;
+    width: 134px;
+    height: 26px;
+    padding: 0 24px 0 0;
+    /* Desktop/Heading 6/H6 500 */
+    
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 26px;
+    /* identical to box height */
+    
+    text-align: center;
+    
+    /* Celestial Grey/CG 700 */
+    
+    color: #333333;
+    
+    
+    /* Inside auto layout */
+    
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+
+.card-contain{
+    position: relative;
+    height: 1000px;
+    background: #F5F5F5;
+    padding: 24px 150px;
+    margin: 0;
+}
+
+.card-item{
+    float: left;
+    background: #FFFFFF;
+    box-shadow: 0px 3px 24px rgba(132, 132, 132, 0.16), inset 0px -3px 6px rgba(0, 0, 0, 0.06);
+    border-radius: 16px;
+    padding: 24px 24px;
+    width: 400px;
+    height: 350px;
+    margin: 0px 30px 50px 0px;
+}
+
+.card-head{
+    height: 100px;
+    border-radius: 0px 0px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.card-icon{
+    border-radius: 8px;
+    width: 120px;
+    height: 120px;
+    margin-right: 24px;
+    /* padding-right: 24px; */
+}
+
+.card-desc{
+    width: 312px;
+    height: 90px;
+    margin: 48px 0px;
+
+    /* Desktop/Body 1/B1 400 */
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    
+    /* Celestial Grey/CG 700 */
+    
+    color: #333333;
+
+}
+
+.card-foot{
+    float: right;
+    padding: 0px 24px;
+
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+
+    color: #666666;
+}
+
+div.card-contain a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* height: auto; */
+    background-color: #f2f2f2;
+    padding: 0 20px;
+  }
+  
+  .navbar-left, .navbar-right{
+    padding: 24px 142px;
+  }
+  .navbar-left a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    margin-right: 20px;
+    border-bottom: 5px solid transparent;
+  }
+  
+  .navbar-left a:active,
+  .navbar-left a:not(:active):hover {
+    border-bottom-color: green;
+  }
+  
+  .navbar-left a.active {
+    border-bottom-color: green;
+  }
+  
+  .navbar-right form {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-right input[type="text"] {
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+  }
+  
+  .navbar-right select {
+    padding: 8px;
+    border: none;
+    border-radius: 24px;
+    background-color: #fff;
+    margin-right: 10px;
+  }
+  
+  /* Hide default dropdown arrow in Firefox */
+  select::-ms-expand {
+    display: none;
+  }
+
+  .navbar {
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* height: 60px; */
+    background-color: #f2f2f2;
+    padding: 0 20px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 26px;
+    text-align: center;
+    color: #333333;
+  }
+  
+  .navbar-left a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    margin-right: 20px;
+    border-bottom: 5px solid transparent;
+  }
+  
+  .navbar-left a:active,
+  .navbar-left a:not(:active):hover {
+    border-bottom-color: green;
+  }
+  
+  .navbar-left a.active {
+    border-bottom-color: green;
+  }
+  
+  .navbar-right form {
+    display: flex;
+    align-items: center;
+  }
+  
+
+  .navbar-right input[type="text"] {
+    padding: 8px 8px 8px 0px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #666666;
+    border-radius: 24px;
+    margin-right: 5px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 26px;
+    text-align: center;
+    color: #333333;
+    background-image: url('../images/Vector.png'); 
+    background-repeat: no-repeat;
+    background-position: 10px center; 
+  }
+  
+  .search-button{
+    display: none;
+  }
+
+
+  .dropdown{
+    border-width: 1px;
+    border-style: solid;
+    border-color: #666666;
+    border-radius: 24px;
+    width: 130px;
+    background: rgb(255, 255, 255);
+  }
+
+  #search-results {
+    max-height: 200px;
+    overflow: auto;
+}
+#search-results ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+#search-results li {
+    padding: 5px;
+    cursor: pointer;
+}
+#search-results li:hover {
+    background-color: #eee;
+}

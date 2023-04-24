@@ -1,0 +1,152 @@
+{% load static %}
+{% csrf_token %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../static/css/card.css">
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+</head>
+<body>
+
+    <div class="header-container">
+        <a href="/">
+        <img src="..\static\images\AI Planet Logo.png" alt="logo"></a>
+    </div>
+    <div class="banner">
+
+
+        <div class="banner-head">
+           <img src="{{posts.image.url}}" alt="card-logo" class = "card-logo">
+           
+           <div class="card-title">
+              {{posts.Title}}
+           </div>  
+            <div class="card-operation">
+                <a href="/editform/{{posts.id}}">
+                <div class="card-edit" ><i class="fas fa-pen mx-2"></i> Edit </div>
+                </a>
+
+                <a href="javascript:void(0);"  onclick="document.getElementById('id01').style.display='block'">
+                <div class="card-delete"><i class="fas fa-trash mx-2"></i> Delete </div>
+                </a>
+                 <div id="id01" class="modal complete-modal">
+                     <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                     <form class="modalcontent" >
+                       <div class="container modaltext">
+                         <p class="modal-head">Delete model</p>
+                         <p class="question">This action is irreversible. Are you sure you want to delete this model?</p>
+                   
+                         <div class="clearfix">
+                           <button type="button" class="cancelbtn"  onclick="document.getElementById('id01').style.display='none'" title="Close Modal" >Cancel</button>
+                           <a href="/delete/{{posts.id}}"><button type="button" class="deletebtn">Delete</button></a>
+                         </div>
+                       </div>
+                     </form>
+                   </div>
+
+            </div>
+        </div>
+        
+        <div class="card-summary">
+            <div class="summary-text">
+                {{posts.Summary}}
+            </div>
+            <div class="star-icon-wrapper">
+                <div class="star-icon">
+        
+                    {% if posts.flag %}
+                    <input type="checkbox" id="star" checked onclick='assignmentFinish(this,"{{posts.id}}")'>
+                    {% else %}
+                    <input type="checkbox" id="star" onclick='assignmentFinish(this,"{{posts.id}}")'>
+                   {% endif %}
+                   <label for="star">&#9733;</label>
+
+                </div>
+                
+                <div class="divider mx-4"> {{posts.pub_date.date}}</div>
+              </div>      
+        </div>
+        </div>
+    </div>
+
+    <div class="card-description">
+        <div class="desc-left">
+        <div class="description-head">
+            Description
+        </div>
+        <div class="description">
+            {{posts.Description}}
+        </div>
+        </div>
+
+        <div class="desc-right">
+            <div class="hack">
+                Hackathon
+            </div>
+            <div class="hackname">
+                {{posts.Hackathon_name}}
+            </div>
+
+            <div class="hacktime">
+                <i class="fas fa-calendar"></i>
+                {{posts.Hackathon_startdate}} - {{posts.Hackathon_enddate}}
+            </div>
+            
+            <div class="hacklink">
+                <a href="{{posts.Github}}" target="_blank">
+                <i class="fab fa-github"></i>
+                GitHub Repository
+                </a>
+            </div>
+            <div class="hacklink">
+                <a href="{{posts.Other}}" target="_blank">
+                    <i class="fas fa-external-link-square-alt"></i> 
+                    Other Link
+                  </a>
+            </div>
+        </div>
+
+
+
+    
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById('id01');
+        
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+          if (event.target == modal) {
+            modal.style.display = "none";
+          }
+        }
+
+        function assignmentFinish(element,id) {
+            console.log(id)
+        link = "{% url 'home:markFavourite' %}";
+        $.ajax({
+          type:'POST',
+          url: link,
+          data:{
+            status: element.checked,
+            id: id,
+            csrfmiddlewaretoken:$('input[name=csrfmiddlewaretoken]').val()
+          },
+          success: function(){
+          }
+        });
+        }
+
+
+        </script>
+    
+</body>
+</html>
