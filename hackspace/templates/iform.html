@@ -55,11 +55,11 @@
         </div>
         <div class="input-field">
             <label for="github-repo">GitHub Repository</label>
-            <input name="github-repo" id="github-repo" type="text" placeholder=" Enter your submission’s public GitHub repository link" required>
+            <input name="github-repo" id="github-repo" type="url" placeholder=" Enter your submission’s public GitHub repository link" required>
         </div>
         <div class="input-field">
             <label for="other-links">Other Links</label>
-            <input name="other-links" id="other-links" type="text" placeholder="You can upload a video demo or URL of you demo app here. " required>
+            <input name="other-links" id="other-links" type="url" placeholder="You can upload a video demo or URL of you demo app here. " required>
         </div>
 
         <button type="submit" class="upload-button">Upload Submissions</button>
@@ -69,4 +69,86 @@
     </div>
     
 </body>
+
+<script>
+    const titleInput = document.getElementById('title');
+    const summaryInput = document.getElementById('summary');
+    const descriptionInput = document.getElementById('description');
+    const hackathonNameInput = document.getElementById('hackathon-name');
+    const githubRepoInput = document.getElementById('github-repo');
+    const otherLinksInput = document.getElementById('other-links');
+    
+    // add event listeners to input fields
+    titleInput.addEventListener('input', validateTitle);
+    summaryInput.addEventListener('input', validateSummary);
+    descriptionInput.addEventListener('input', validateDescription);
+    hackathonNameInput.addEventListener('input', validateHackathonName);
+    githubRepoInput.addEventListener('input', validateGithubRepo);
+    otherLinksInput.addEventListener('input', validateOtherLinks);
+
+    // validate title input
+    function validateTitle() {
+      const maxTitleLength = 200;
+      if (titleInput.value.length > maxTitleLength) {
+        titleInput.setCustomValidity(`Title must be less than or equal to ${maxTitleLength} characters.`);
+      } else {
+        titleInput.setCustomValidity('');
+      }
+    }
+
+    // validate summary input
+    function validateSummary() {
+      const maxSummaryLength = 500;
+      if (summaryInput.value.length > maxSummaryLength) {
+        summaryInput.setCustomValidity(`Summary must be less than or equal to ${maxSummaryLength} characters.`);
+      } else {
+        summaryInput.setCustomValidity('');
+      }
+    }
+
+    // validate description input
+    function validateDescription() {
+      const maxDescriptionLength = 3000;
+      if (descriptionInput.value.length > maxDescriptionLength) {
+        descriptionInput.setCustomValidity(`Description must be less than or equal to ${maxDescriptionLength} characters.`);
+      } else {
+        descriptionInput.setCustomValidity('');
+      }
+    }
+    
+    // validate hackathon name input
+    function validateHackathonName() {
+      const maxHackathonNameLength = 200;
+      if (hackathonNameInput.value.length > maxHackathonNameLength) {
+        hackathonNameInput.setCustomValidity(`Hackathon Name must be less than or equal to ${maxHackathonNameLength} characters.`);
+      } else {
+        hackathonNameInput.setCustomValidity('');
+      }
+    }
+
+    function validateGithubRepo() {
+      let githubRepoInput = document.getElementById("github-repo");
+      let githubRepoValue = githubRepoInput.value.trim();
+      let githubRepoRegex = /^(https?:\/\/)?(www\.)?github\.com\/[a-zA-Z0-9_.-]+\/[a-zA-Z0-9_.-]+\/?$/;
+    
+      if (!githubRepoRegex.test(githubRepoValue)) {
+        githubRepoInput.setCustomValidity("Please enter a valid GitHub repository link");
+      } else {
+        githubRepoInput.setCustomValidity("");
+      }
+    }
+    
+    function validateOtherLinks() {
+      let otherLinksInput = document.getElementById("other-links");
+      let otherLinksValue = otherLinksInput.value.trim();
+      let otherLinksRegex = /^(ftp|http|https):\/\/[^ "]+$/;
+    
+      if (otherLinksValue && !otherLinksRegex.test(otherLinksValue)) {
+        otherLinksInput.setCustomValidity("Please enter a valid URL for other links");
+      } else {
+        otherLinksInput.setCustomValidity("");
+      }
+    }
+
+</script>
 </html>

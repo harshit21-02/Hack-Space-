@@ -137,6 +137,7 @@ body {
 }
 
 .card-head{
+  overflow:hidden;
     height: 100px;
     border-radius: 0px 0px;
     font-family: 'Poppins';
@@ -334,3 +335,8 @@ div.card-contain a {
 #search-results li:hover {
     background-color: #eee;
 }
+
+.card-title{
+  float: right;
+  width: 288px;
+  }
