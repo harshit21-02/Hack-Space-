@@ -122,6 +122,7 @@ MEDIA_URL = '/media/' # Public URL at the browser
 
 STATICFILES_DIRS =[
     BASE_DIR/ "static" ,
+    "static",
 ]
 
 # Default primary key field type
