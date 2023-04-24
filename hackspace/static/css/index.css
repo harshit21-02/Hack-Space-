@@ -300,7 +300,7 @@ div.card-contain a {
     line-height: 26px;
     text-align: center;
     color: #333333;
-    background-image: url('../images/Vector.png'); 
+    background-image: url("{% static 'images/Vector.png' %}"); 
     background-repeat: no-repeat;
     background-position: 10px center; 
   }
