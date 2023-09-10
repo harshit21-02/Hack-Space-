@@ -130,3 +130,5 @@ STATICFILES_DIRS =[
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 ALLOWED_HOSTS = ['harshit20.pythonanywhere.com','127.0.0.1','llm-hackathon-codered.azurewebsites.net']
+
+SESSION_COOKIE_SAMESITE = 'None'
