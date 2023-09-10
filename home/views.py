@@ -8,7 +8,57 @@ from django.contrib import messages
 import datetime
 from datetime import date  
 from django.http import JsonResponse
+from home.serializer import SubmissionSerializer
+from rest_framework.renderers import JSONRenderer
+from rest_framework.views import APIView
+from rest_framework import generics
+from rest_framework.response import Response
+from rest_framework.status import HTTP_201_CREATED, HTTP_400_BAD_REQUEST
+from rest_framework import status
+from rest_framework.renderers import TemplateHTMLRenderer
 # Create your views here
+
+
+# class HackathonList(APIView):
+#     renderer_classes = [TemplateHTMLRenderer]
+#     template_name = 'index.html'
+
+#     def get(self, request):
+#         hackathons = submission.objects.all()
+#         serializer = SubmissionSerializer(hackathons, many=True)
+#         return Response({'posts': serializer.data})
+
+
+# class MyModelCreateView(generics.CreateAPIView):
+#     serializer_class = SubmissionSerializer
+
+#     def post(self, request, *args, **kwargs):
+#         serializer = self.serializer_class(data=request.data)
+#         if serializer.is_valid():
+#             serializer.save()
+#             return Response(serializer.data, status=HTTP_201_CREATED)
+#         else:
+#             return Response(serializer.errors, status=HTTP_400_BAD_REQUEST)
+
+# class HackathonList(APIView):
+
+#     queryset = submission.objects.all()
+#     serializer_class = SubmissionSerializer
+# #     permission_classes = [IsAuthenticatedOrReadOnly]
+
+#     def get(self,request):
+#         hackathons = submission.objects.all()
+#         serializer = SubmissionSerializer(hackathons, many=True)
+#         return Response(serializer.data)
+    
+#     def post(self, request):
+#         serializer = SubmissionSerializer(data=request.data)
+#         if serializer.is_valid():
+#             serializer.save()
+#             return Response(serializer.data, 
+#                             status=status.HTTP_201_CREATED)
+#         return Response(serializer.errors, 
+#                         status=status.HTTP_400_BAD_REQUEST)
 
 def home(request):
      #to remember status of sorted order
@@ -70,11 +120,6 @@ def upload(request):
           if len(request.FILES)!=0:
            #  Saving POST'ed file to storage
             file = request.FILES['image']
-            file_name = default_storage.save(file.name, file)
-            #  Reading file from storage
-            file = default_storage.open(file_name)
-            file_url = str(os.getcwd()+str(default_storage.url(file_name)))
-            print(file_url)
             hack=submission()
             hack.Title=title
             hack.Summary=summary
