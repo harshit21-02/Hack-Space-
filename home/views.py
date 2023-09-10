@@ -205,3 +205,5 @@ def delete(request,id):
      hack=submission.objects.get(id=id)
      hack.delete()
      return redirect('/')
+
+     # hello
